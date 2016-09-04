@@ -7,14 +7,14 @@ import os
 
 
 def print_float(value):
-    if value:
+    if value >= 0.5:
         return '%.1f' % value
     else:
         return ' . '
 
 
 def print_int(value):
-    if value:
+    if value < 125:
         return ' '
     else:
         return 'X'
@@ -57,7 +57,7 @@ def print_rating(arr):
 
 
 def main(sample_name):
-    sample_path = os.path.join('samples/binary/', sample_name)
+    sample_path = os.path.join('samples/orig/', sample_name)
     arr = cv2.imread(sample_path, cv2.IMREAD_GRAYSCALE)
     print(arr)
     # print(arr)
